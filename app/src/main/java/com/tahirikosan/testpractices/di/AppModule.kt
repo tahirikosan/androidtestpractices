@@ -1,11 +1,15 @@
 package com.tahirikosan.testpractices.di
 
 import android.content.Context
+import androidx.room.PrimaryKey
 import androidx.room.Room
+import com.tahirikosan.testpractices.data.local.ShoppingDao
 import com.tahirikosan.testpractices.other.Constants.BASE_URL
 import com.tahirikosan.testpractices.other.Constants.DATABASE_NAME
 import com.tahirikosan.testpractices.data.local.ShoppingDatabase
 import com.tahirikosan.testpractices.data.remote.PixabayAPI
+import com.tahirikosan.testpractices.repositories.ShoppingRepository
+import com.tahirikosan.testpractices.repositories.ShoppingRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,6 +31,14 @@ object AppModule {
         context,
         ShoppingDatabase::class.java, DATABASE_NAME
     ).build()
+
+
+    @Singleton
+    @Provides
+    fun provideShoppingRepository(
+        shoppingDao: ShoppingDao,
+        pixabayAPI: PixabayAPI
+    ): ShoppingRepository = ShoppingRepositoryImpl(shoppingDao = shoppingDao, pixabayAPI = pixabayAPI) as ShoppingRepository
 
     @Singleton
     @Provides
