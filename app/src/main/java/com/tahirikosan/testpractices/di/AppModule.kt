@@ -1,10 +1,9 @@
 package com.tahirikosan.testpractices.di
 
-import android.app.Application
 import android.content.Context
 import androidx.room.Room
-import com.tahirikosan.testpractices.Constants.BASE_URL
-import com.tahirikosan.testpractices.Constants.DATABASE_NAME
+import com.tahirikosan.testpractices.other.Constants.BASE_URL
+import com.tahirikosan.testpractices.other.Constants.DATABASE_NAME
 import com.tahirikosan.testpractices.data.local.ShoppingDatabase
 import com.tahirikosan.testpractices.data.remote.PixabayAPI
 import dagger.Module
