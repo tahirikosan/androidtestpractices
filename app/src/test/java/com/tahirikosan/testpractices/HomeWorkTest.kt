@@ -2,6 +2,7 @@ package com.tahirikosan.testpractices
 
 
 import com.google.common.truth.Truth.assertThat
+import com.tahirikosan.testpractices.exercise.HomeWork
 import org.junit.Test
 
 class HomeWorkTest{

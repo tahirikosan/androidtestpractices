@@ -1,6 +1,7 @@
 package com.tahirikosan.testpractices
 
 import com.google.common.truth.Truth.assertThat
+import com.tahirikosan.testpractices.exercise.RegistrationUtil
 import org.junit.Test
 
 // Unit test examples.

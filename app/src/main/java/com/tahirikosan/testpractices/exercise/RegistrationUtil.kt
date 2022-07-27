@@ -1,4 +1,4 @@
-package com.tahirikosan.testpractices
+package com.tahirikosan.testpractices.exercise
 
 object RegistrationUtil {
 
