@@ -13,7 +13,7 @@ class FakeShoppingRepository: ShoppingRepository {
     private val observableShoppingItems = MutableLiveData<List<ShoppingItem>>(shoppingItems)
     private val observableTotalPrice = MutableLiveData<Float>()
 
-    private var shouldReturnNetworkError = false;
+    private var shouldReturnNetworkError = false
     fun setShouldReturnNetworkError(value: Boolean){
         shouldReturnNetworkError = value;
     }
